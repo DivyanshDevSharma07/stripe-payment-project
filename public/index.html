@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe Payment Project</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f7fb;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .card{
+            background:white;
+            width:380px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 10px 30px rgba(0,0,0,.15);
+            text-align:center;
+        }
+
+        .icon{
+            font-size:60px;
+        }
+
+        h1{
+            margin:15px 0;
+            color:#222;
+        }
+
+        p{
+            color:#666;
+            margin:10px 0;
+            line-height:1.5;
+        }
+
+        .price{
+            font-size:30px;
+            color:#0d6efd;
+            font-weight:bold;
+            margin:20px 0;
+        }
+
+        button{
+            width:100%;
+            padding:15px;
+            border:none;
+            border-radius:8px;
+            background:#0d6efd;
+            color:white;
+            font-size:17px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        button:hover{
+            background:#0b5ed7;
+        }
+
+        button:disabled{
+            background:gray;
+            cursor:not-allowed;
+        }
+
+        .footer{
+            margin-top:20px;
+            font-size:13px;
+            color:#888;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="icon">💳</div>
+
+    <h1>Premium Web Template</h1>
+
+    <p>
+        Purchase a premium responsive template.
+        Secure payment powered by Stripe Checkout.
+    </p>
+
+    <div class="price">$20</div>
+
+    <button id="pay-btn">Pay Now</button>
+
+    <div class="footer">
+        Test Mode • No real payment will be charged
+    </div>
+
+</div>
+
+<script>
+
+const payBtn = document.getElementById("pay-btn");
+
+payBtn.addEventListener("click", async ()=>{
+
+    try{
+
+        payBtn.disabled = true;
+        payBtn.textContent = "Processing...";
+
+        const response = await fetch("/checkout/create-checkout-session",{
+            method:"POST"
+        });
+
+        const data = await response.json();
+        console.log(data);
+        console.log(data.url);
+        window.location.href = data.url;
+
+    }
+    catch(err){
+
+        alert("Failed to create checkout session");
+
+        payBtn.disabled = false;
+        payBtn.textContent = "Pay Now";
+
+        console.error(err);
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
