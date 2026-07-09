@@ -5,7 +5,7 @@ const orders = pgTable('orders', {
   productName: text('product_name').notNull(),
   amount: integer('amount').notNull(),
   currency: text('currency').notNull(),
-  stripeSessionId: text('stripe_session_id'),
+  stripeSessionId: text('stripe_session_id').unique(),
   createdAt: timestamp('created_at').defaultNow(),
 });
 
