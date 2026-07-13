@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Payment Cancelled</title>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Payment Cancelled</title>
+    <link
+        rel="stylesheet"
+        href="css/cancel.css"
+    >
 </head>
-<body style="font-family:Arial;text-align:center;margin-top:80px;">
-<h1>❌ Payment Cancelled</h1>
-<p>Your payment was cancelled.</p>
-
-<a href="/">Try Again</a>
+<body>
+    <div class="container">
+        <div class="cancel-card">
+            <div class="warning-icon">
+                ⚠
+            </div>
+            <h1>Payment Cancelled</h1>
+            <p class="subtitle">
+                Your payment was not completed.
+                <br>
+                No charges have been made.
+            </p>
+            <a
+                href="/"
+                class="primary-btn"
+            >
+                Try Again
+            </a>
+            <a
+                href="/"
+                class="secondary-btn"
+            >
+                Continue Shopping
+            </a>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Payment Successful</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <link rel="stylesheet" href="css/success.css">
 </head>
-<body style="font-family:Arial;text-align:center;margin-top:80px;">
-<h1>✅ Payment Successful</h1>
-<p>Thank you for your purchase.</p>
-
-<a href="/">Return Home</a>
+<body>
+    <div class="container">
+        <div class="success-card">
+            <div class="success-icon">
+                ✓
+            </div>
+            <h1>Payment Successful</h1>
+            <p class="subtitle">
+                Your payment has been processed successfully.
+            </p>
+            <div class="receipt">
+                <h2>Receipt</h2>
+                <div class="receipt-row">
+                    <span>Product</span>
+                    <span>Premium Template</span>
+                </div>
+                <div class="receipt-row">
+                    <span>Amount</span>
+                    <span>$20.00</span>
+                </div>
+                <div class="receipt-row">
+                    <span>Transaction ID</span>
+                    <span>Loading...</span>
+                </div>
+                <div class="receipt-row">
+                    <span>Status</span>
+                    <span>Paid</span>
+                </div>
+                <div class="receipt-row">
+                    <span>Date</span>
+                    <span>Loading...</span>
+                </div>
+            </div>
+            <button class="primary-btn">
+                Download Receipt
+            </button>
+            <button
+                class="secondary-btn"
+                onclick="window.location.href='/'"
+            >
+            Continue Shopping
+            </button>
+        </div>
+    </div>
 </body>
 </html>

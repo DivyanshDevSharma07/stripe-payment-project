@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6a5af9, #8360c3);
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        linear-gradient(
+            rgba(38, 24, 94, 0.72),
+            rgba(38, 24, 94, 0.72)
+        ),
+        url("../images/payment-background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+.container {
+    padding: 20px;
+}
+.success-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 420px;
+    max-width: 100%;
+    color: white;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: #28a745;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    animation: pop 0.6s ease;
+}
+.success-card h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.receipt {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.receipt h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.receipt-row:last-child {
+    border-bottom: none;
+}
+.receipt-row span:first-child {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+.receipt-row span:last-child {
+    font-weight: bold;
+    color: white;
+}
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 15px;
+}
+.primary-btn {
+    background: #28a745;
+    color: white;
+}
+.primary-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+.secondary-btn {
+    background: white;
+    color: #6a5af9;
+}
+.secondary-btn:hover {
+    background: #f4f4f4;
+    transform: translateY(-2px);
+}
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+    70% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        linear-gradient(
+            rgba(38, 24, 94, 0.72),
+            rgba(38, 24, 94, 0.72)
+        ),
+        url("../images/payment-background.png");
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+    width:100%;
+    max-width:500px;
+    text-align:center;
+    padding:20px;
+}
+.logo{
+    width:180px;
+    margin-bottom:40px;
+}
+.cancel-card{
+    background:white;
+    backdrop-filter: blur(15px);
+    border-radius:18px;
+    padding:45px;
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.08);
+}
+.warning-icon{
+    width:65px;
+    height:65px;
+    margin:0 auto 25px;
+    border-radius:10px;
+    background:#eef1f6;
+    color:#5b6475;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+}
+.cancel-card h1{
+    font-size:38px;
+    margin-bottom:18px;
+    color:#1d1d1f;
+}
+.subtitle{
+    color:#5f6775;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:35px;
+}
+.primary-btn{
+    display:block;
+    text-decoration:none;
+    background:#635bff;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+    transition:.3s;
+    font-weight:bold;
+}
+.primary-btn:hover{
+    background:#5147ff;
+}
+.secondary-btn{
+    display:block;
+    text-decoration:none;
+    background:#eef1f6;
+    color:#333;
+    padding:15px;
+    border-radius:10px;
+    transition:.3s;
+    font-weight:bold;
+}
+.secondary-btn:hover{
+    background:#dfe4ed;
+}
