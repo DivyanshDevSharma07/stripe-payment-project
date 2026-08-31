@@ -1,6 +1,5 @@
 # Security Checklist
-> Review each item below and check it off once you've verified it in your project.
-> This checklist is part of your **Week 4** deliverables.
+
 ## 🔑 Secret Management
 - [ ] `.env` file is listed in `.gitignore`
 - [ ] `.env` file is **never** committed to version control
